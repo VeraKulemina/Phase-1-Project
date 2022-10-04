@@ -1,55 +1,57 @@
+//add query selectors for character data elements
+
+//this should be the id of your menu items
+const test = document.getElementById("test");
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5")
-    .then(response => response.json())
-    .then(characters => {
-        characters.forEach(objCharacters => showCharacter(objCharacters))
-        displayCharacters(characters[0])
-      })})
-
-const characterBar = document.getElementById("character-bar");
-const charactersImage = document.querySelector('#image');
-const cuteNames = document.querySelector('#name');
-const statusChar = document.querySelector("#vote-count")
-
-characterBar.addEventListener("mouseover", (event) => {
-    // highlight the mouseover target
-    event.target.style.color = "red";
+    fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5")
+        .then(r => r.json())
+        .then( characters => { 
+            charDetails(characters[0]),
+            characters.forEach(character => characterDetails(character))
+        });
 });
 
-characterBar.addEventListener("mouseout", (event) => {
-    // highlight the mouseover target
-    event.target.style.color = "#78BE21";
-});
-
-
-
-function showCharacter(objCharacter) {
-    const img = document.createElement('span');
-    img.textContent = objCharacter.name;
-    img.addEventListener('click', (e) => displayCharacters(objCharacter))
-    characterBar.append(img);
-}
-
-function displayCharacters(objCharacters) {
-    //console.log(characters)
-    cuteNames.textContent = objCharacters.name
-    statusChar.textContent = objCharacters.status;
-   charactersImage.src = objCharacters.image 
-}
-
-document.querySelector("#votes-form").addEventListener('submit', (e) =>{
+document.addEventListener("submit", (e) => {
     e.preventDefault();
-    let copyVotes = e.target.votes.value
-    console.log(copyVotes);
-    handleVotes(copyVotes);
-})
+    let name = e.target.userInput.value;
+    fetch(`https://rickandmortyapi.com/api/character/?name=${name}`)
+        .then(r => r.json())
+        .then( characters => { 
+            characters.forEach(character => characterDetails(character))
+        });
+    // write code to remove all html content where characters are supposed to go
 
-function handleVotes(votesAdded, currentVotes = parseInt(document.querySelector("#vote").innerText)){
-    currentVotes += parseInt(votesAdded);
-    let voteDisplay = document.querySelector("#vote");
-    voteDisplay.textContent = currentVotes;
-    console.log(currentVotes);
+    //write code to add new character html
+});
+
+// This handler will be executed every time the cursor
+// is moved over a different list item
+test.addEventListener("mouseover", (event) => {
+    // highlight the mouseover target
+    event.target.style.color = "green";
+  
+    // reset the color after a short delay
+    // setTimeout(() => {
+    //   event.target.style.color = "";
+    // }, 500);
+});
+
+function addCaracters(characterData){
+    let spanCharacter = document.createElement("span")
+    spanCharacter.textContent = characterData.name;
+    //calls charDetails for clicked character profile to gather data about charcter
+    //then changes textContent and src attributes to display character profile
+    spanCharacter.addEventListener("click", (e) => charDetails(characterData));
+    characterName.append(spanCharacter);
+   
 }
-document.querySelector("#reset-btn").addEventListener('click', (event) => {
-    handleVotes(0, 0);
-})
+
+function charDetails(data){
+    // example from code challenge
+    // names.textContent = data.name;
+    // vote.textContent = data.votes;
+    // mainImg.src = data.image;
+}
+
