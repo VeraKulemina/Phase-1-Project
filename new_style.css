@@ -1,0 +1,72 @@
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h1 {
+    font-family: 'NekroKids', arial;
+    color: transparent;
+    text-shadow: 0 0 1px #78BE21;
+    font-size: 55px;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo{
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRe8LHd6wvbvQyLTyZdyZncpBYrOcy82isMw&usqp=CAU");
+    background-repeat: repeat;
+    padding: 0.5em;
+  }
+  
+  #character-bar {
+    height: 20vh;
+    background: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+  }
+  
+  #character-bar span {
+    padding: 1%;
+    height: 80%;
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    font-size: 6 px;
+    align-items: center;
+    border-radius: 2em;
+    border: 1px solid white;
+    color: #78BE21
+  
+  }
+  
+  .characterInfo{
+    height: 550px;
+    padding: 30px;
+    font-size: 24px;
+    /* border: dotted; */
+    text-align: center;
+  }
+  
+  input[type="submit"], button {
+    background-color: #78BE21;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  input[type="text"] {
+    font-size: 3vh;
+  }
+  
+  #image{
+    width: 300px;
+    height: 300px;
+  }
+  
