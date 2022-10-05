@@ -1,0 +1,117 @@
+html {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: 'Get Schwifty', arial;
+  color: transparent;
+  text-shadow: 0 0 1px #78BE21;
+  font-size: 55px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo{
+  text-align: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRe8LHd6wvbvQyLTyZdyZncpBYrOcy82isMw&usqp=CAU");
+  background-repeat: repeat;
+  padding: 0.5em;
+}
+
+#character-bar {
+  height: 20vh;
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  font-family: 'Get Schwifty', arial;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5e0aa6a6-1889-4ff3-8223-50275c288d0f/dc3x8rj-8941eb25-a80b-47c8-beb2-2152965e190e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVlMGFhNmE2LTE4ODktNGZmMy04MjIzLTUwMjc1YzI4OGQwZlwvZGMzeDhyai04OTQxZWIyNS1hODBiLTQ3YzgtYmViMi0yMTUyOTY1ZTE5MGUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7NrEaV6lZLbG8okjQzfYlBP71M07_AtrzP2KuDpMLi0"); 
+  text-decoration-color: white;
+}
+
+#character-bar span {
+  padding: 1%;
+  height: 80%;
+  width: 17vw;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  align-items: center;
+  border-radius: 2em;
+  border: 15px solid w;
+  color: #000;
+
+
+}
+
+.characterInfo{
+  height: 550px;
+  padding: 30px;
+  font-size: 24px;
+  /* border: dotted; */
+  text-align: center;
+  font-family: 'Get Schwifty', arial;
+}
+
+input[type="submit"], button {
+  background-color: #78BE21;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  font-family: 'Get Schwifty', arial;
+}
+
+input[type="text"] {
+  font-size: 3vh;
+  font-family: 'Get Schwifty', arial;
+}
+
+#image{
+  width: 300px;
+  height: 300px;
+  border-radius: 6em;
+}
+
+.footer {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRe8LHd6wvbvQyLTyZdyZncpBYrOcy82isMw&usqp=CAU");
+  padding: 10px;
+  text-align: center;
+  color: #78BE21;
+  font-family: 'Get Schwifty', arial;
+  font-size: 25;
+  bottom: 0px;
+}
+
+body {
+  background-image: url("https://media1.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed scroll;
+  background-position: center center; 
+  /* background-color: #123412;  */
+  background-color: #123412;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 100px;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #123412;
+  color: white;
+}
+
+.next {
+  background-color: #123412;
+  color: white;
+}
