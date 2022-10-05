@@ -10,13 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
           characters.forEach(objCharacters => showCharacter(objCharacters));
           //console.log(characters[0])
           displayCharacters(characters[0]);
+          characters.forEach(objCharacters => info(objCharacters))
+          console.log(info((idsIndex)));
         })});
 
 characterBar.addEventListener("mouseover", (event) => {
     event.target.style.color = "red";
 });
 characterBar.addEventListener("mouseout", (event) => {
-        event.target.style.color = "#78BE21";
+        event.target.style.color = "white";
 });
 function showCharacter(objCharacter) {
     const img = document.createElement("span");
@@ -44,3 +46,17 @@ function handleVotes(votesAdded, currentVotes = parseInt(document.querySelector(
 document.querySelector("#reset-btn").addEventListener("click", (event) => {
     handleVotes(0, 0);
 })
+
+// console.log(idsIndex);
+const next = document.querySelector(".next");
+const detailInfo = document.querySelector("#detailed-info");
+// next.addEventListener("click", (eve) => {})
+
+function info(infoData) {
+    let ids = infoData.id;
+    console.log(ids)
+    return parseInt(ids);
+}
+const idsIndex = [];
+    idsIndex.push(info);
+    console.log(idsIndex);
