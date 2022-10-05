@@ -3,7 +3,7 @@ html {
 }
 
 h1 {
-  font-family: 'NekroKids', arial;
+  font-family: 'Get Schwifty', arial;
   color: transparent;
   text-shadow: 0 0 1px #78BE21;
   font-size: 55px;
@@ -29,6 +29,7 @@ html, body {
   align-items: center;
   padding-bottom: 3vh;
   padding-top: 3vh;
+  font-family: 'Get Schwifty', arial;
 }
 
 #character-bar span {
@@ -37,7 +38,7 @@ html, body {
   width: 8vw;
   display: flex;
   justify-content: center;
-  font-size: 6 px;
+  font-size: 8 px;
   align-items: center;
   border-radius: 2em;
   border: 1px solid white;
@@ -51,6 +52,7 @@ html, body {
   font-size: 24px;
   /* border: dotted; */
   text-align: center;
+  font-family: 'Get Schwifty', arial;
 }
 
 input[type="submit"], button {
@@ -58,11 +60,12 @@ input[type="submit"], button {
   color: white;
   font-size: 18px;
   border-radius: 6px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Get Schwifty', arial;
 }
 
 input[type="text"] {
   font-size: 3vh;
+  font-family: 'Get Schwifty', arial;
 }
 
 #image{
