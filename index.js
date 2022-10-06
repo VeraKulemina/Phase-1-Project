@@ -23,10 +23,11 @@ characterBar.addEventListener("mouseout", (event) => {
 function showCharacter(objCharacter) {
     const img = document.createElement("span");
     img.textContent = objCharacter.name;
-    img.addEventListener("click", (e) => displayCharacters(objCharacter))
+    img.addEventListener("click", (e) => displayCharacters(objCharacter));
     characterBar.append(img);
 }
 function displayCharacters(objCharacters) {
+    cuteNames.setAttribute("data-id", objCharacters.id);
     cuteNames.textContent = objCharacters.name;
     statusChar.textContent = objCharacters.status;
    charactersImage.src = objCharacters.image
@@ -49,14 +50,36 @@ document.querySelector("#reset-btn").addEventListener("click", (event) => {
 
 // console.log(idsIndex);
 const next = document.querySelector(".next");
+const previous = document.querySelector(".previous");
 const detailInfo = document.querySelector("#detailed-info");
-// next.addEventListener("click", (eve) => {})
 
-function info(infoData) {
-    let ids = infoData.id;
-    console.log(ids)
-    return parseInt(ids);
-}
-const idsIndex = [];
-    idsIndex.push(info);
-    console.log(idsIndex);
+
+
+next.addEventListener("click", (e) => {
+    e.preventDefault();
+    const currentId = parseInt(cuteNames.getAttribute("data-id"));
+    if(currentId <= 4){ 
+        console.log(currentId);
+        let nextId = currentId + 1;
+        fetch(`https://rickandmortyapi.com/api/character/${nextId}`)
+        .then(response => response.json())
+        .then(characters =>  {
+            displayCharacters(characters);
+        });
+    }
+});
+
+
+previous.addEventListener("click", (e) => {
+    e.preventDefault();
+    const currentId = parseInt(cuteNames.getAttribute("data-id"));
+    if(currentId > 1){
+        console.log(currentId);
+        let previousId = currentId - 1;
+        fetch(`https://rickandmortyapi.com/api/character/${previousId}`)
+        .then(response => response.json())
+        .then(characters =>  {
+            displayCharacters(characters);
+        });
+    }
+});
