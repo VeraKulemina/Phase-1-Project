@@ -5,8 +5,9 @@ html {
 h1 {
   font-family: 'Get Schwifty', arial;
   color: transparent;
-  text-shadow: 0 0 1px #78BE21;
+  text-shadow: 0 0 1px #8af00e;
   font-size: 55px;
+  
 }
 
 html, body {
@@ -113,11 +114,13 @@ a:hover {
 .previous {
   background-color: #123412;
   color: white;
+  font-size: 4vh
 }
 
 .next {
   background-color: #123412;
   color: white;
+  font-size: 4vh;
 }
 
 h4 {

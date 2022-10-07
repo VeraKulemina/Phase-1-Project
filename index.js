@@ -38,7 +38,7 @@ function displayCharacters(objCharacters) {
 
 }
 function alertFunction() {
-    alert("Webba DUB DUb")
+    alert("Wubba Lubba Dub Dub!")
    }
 document.querySelector("#votes-form").addEventListener("submit", (e) =>{
     e.preventDefault();
@@ -93,29 +93,23 @@ previous.addEventListener("click", (e) => {
 });
 
 const randomBtn = document.querySelector("#clickme");
-
+// this event attached to button that picks randon characters
 randomBtn.addEventListener("click", randomEvent => {
     randomEvent.preventDefault();
     let currentrandomId = parseInt(cuteNames.getAttribute("data-id"));
-    // for (var i = 0; i < 20; i++) {
-    //     var count = 0;
-    //     for (var j = 0; j < Math.floor(Math.random() * 20); j++) {
-    //         count++;
-    //     }
-    //     console.log(count);
-
-    if(currentrandomId <= 5){
+    
+    if(currentrandomId <= 800){
         function getRandomArbitrary(min, max) {
             currentrandomId = Math.floor(Math.random() * (max - min) + min);
             return currentrandomId;
         }
           }
-        getRandomArbitrary(1,5)
+        
+        getRandomArbitrary(1,800)
         fetch(`https://rickandmortyapi.com/api/character/${currentrandomId}`)
         .then(response => response.json())
         .then(characters =>  {
             displayCharacters(characters);
-            getRandomArbitrary(1,5)
-            console.log(getRandomArbitrary(1,5))
+            
         });
     })
