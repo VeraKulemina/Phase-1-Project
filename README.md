@@ -1,7 +1,13 @@
 # The Project based on "Rick amd Morty" cartune main caracters.
 ## Project description:
 ![This is an image](https://user-images.githubusercontent.com/110997836/194588514-3d62de22-2487-4125-8f88-c5abe40fea1a.png)
-
+As for meeting requirements, we are creating a JavaScript, CSS, and HTML frontend project that is coming from a public API. So our app is on a single page with event listeners and interesting visuals.
+The data of the API we used in our project:
+* Live Status
+* Species Type
+* Gender
+* Name
+* Image
 
 When entering our website users will be presented with a 5 characters in the navbar and first character in mid screen. The data for the characters comes from an API source. 
 For users: 
@@ -10,6 +16,9 @@ For users:
 * You can as a User, click the next/previous page button to go to the next or previous page.
 * As user you can add votes and see total votes you added.
 * Reset button resets votes.
+* On our single page we have a button called “Click Me”. This button generates a random character from the API, which has a total of 800 characters.
+
+
 
 The website has dynamic backgrounds.
 ## Project Requirements
