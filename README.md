@@ -1,4 +1,4 @@
-# The Project based on "Rick amd Morty" cartune main caracters.
+# The Project based on "Rick and Morty" cartune main caracters.
 ## Project description:
 ![This is an image](https://user-images.githubusercontent.com/110997836/194588514-3d62de22-2487-4125-8f88-c5abe40fea1a.png)
 As for meeting requirements, we are creating a JavaScript, CSS, and HTML frontend project that is coming from a public API. So our app is on a single page with event listeners and interesting visuals.
