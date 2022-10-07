@@ -1,6 +1,6 @@
 # The Project based on "Rick amd Morty" cartune main caracters.
 ## Project description:
-![This is an image]()
+![This is an image](https://user-images.githubusercontent.com/110997836/194588514-3d62de22-2487-4125-8f88-c5abe40fea1a.png)
 
 
 When entering our website users will be presented with a 5 characters in the navbar and first character in mid screen. The data for the characters comes from an API source. 
